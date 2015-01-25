@@ -47,7 +47,7 @@ subject_train <- mutate(subject_train, Group = "Train")
 ## Create and clean up features to use as column names for X_test and X_train.
 features_vector <- t(features)
 features_vector <- features_vector[2, 1:561]
-features_vector <- gsub("\\.|/|\\-|\"|\\s|\\(|\\)" , "" , features_vector)
+features_vector <- gsub("\\.|/|\\-|\"|\\s|\\(|\\)|\\," , "" , features_vector)
 features_vector <- gsub("mean", "Mean", features_vector)
 features_vector <- gsub("std", "Std", features_vector)
 
